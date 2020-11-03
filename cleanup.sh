@@ -69,12 +69,6 @@ rm -rfv ~/Library/Logs/CoreSimulator/* &>/dev/null
 echo 'Clear Adobe Cache Files...'
 sudo rm -rfv ~/Library/Application\ Support/Adobe/Common/Media\ Cache\ Files/* &>/dev/null
 
-echo 'Cleanup iOS Applications...'
-rm -rfv ~/Music/iTunes/iTunes\ Media/Mobile\ Applications/* &>/dev/null
-
-echo 'Remove iOS Device Backups...'
-rm -rfv ~/Library/Application\ Support/MobileSync/Backup/* &>/dev/null
-
 echo 'Cleanup XCode Derived Data and Archives...'
 rm -rfv ~/Library/Developer/Xcode/DerivedData/* &>/dev/null
 rm -rfv ~/Library/Developer/Xcode/Archives/* &>/dev/null
@@ -120,7 +114,6 @@ if type "brew" &>/dev/null; then
     fi
     echo 'Cleanup Homebrew Cache...'
     brew cleanup -s &>/dev/null
-    #brew cask cleanup &>/dev/null
     rm -rfv $(brew --cache) &>/dev/null
     brew tap --repair &>/dev/null
 fi
@@ -162,4 +155,3 @@ newAvailable=$(df / | tail -1 | awk '{print $4}')
 count=$((oldAvailable - newAvailable))
 #count=$(( $count * 512))
 bytesToHuman $count
-
