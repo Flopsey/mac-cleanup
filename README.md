@@ -27,31 +27,31 @@ A cleanup script for macOS that runs the following tasks:
 ### Using curl
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/fwartner/mac-cleanup/master/installer.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/flopsey/mac-cleanup/master/installer.sh)"
 ```
 
 ### Using wget
 
 ```bash
-sh -c "$(wget https://raw.githubusercontent.com/fwartner/mac-cleanup/master/installer.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/flopsey/mac-cleanup/master/installer.sh -O -)"
 ```
 
 ## Step by Step Install
 
-1. Download: `curl -o cleanup https://raw.githubusercontent.com/fwartner/mac-cleanup/master/cleanup.sh`
+1. Download: `curl -o cleanup https://raw.githubusercontent.com/flopsey/mac-cleanup/master/cleanup.sh`
 2. Make it executable: `chmod +x cleanup`
 3. Move to make it globally usable: `sudo mv cleanup /usr/local/bin/cleanup`
 
 ## Update
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/fwartner/mac-cleanup/master/installer.sh" | bash -s update
+curl -fsSL "https://raw.githubusercontent.com/flopsey/mac-cleanup/master/installer.sh" | bash -s update
 ```
 
 ## Uninstall
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/fwartner/mac-cleanup/master/installer.sh" | bash -s uninstall
+curl -fsSL "https://raw.githubusercontent.com/flopsey/mac-cleanup/master/installer.sh" | bash -s uninstall
 ```
 
 ## Usage Options
